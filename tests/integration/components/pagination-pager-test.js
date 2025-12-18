@@ -16,7 +16,7 @@ module('Integration | Component | pagination-pager', function (hooks) {
 
     await render(hbs`<PaginationPager @changePage={{this.changePage}} />`);
 
-    assert.ok(this.element.textContent.includes('«'));
+    assert.dom(this.element).containsText('«');
   });
 
   test('it fires change action', async function (assert) {
